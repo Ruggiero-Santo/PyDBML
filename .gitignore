@@ -11,3 +11,6 @@ pydbml.egg-info
 .coverage
 .eggs
 .idea
+
+.vscode
+venv
