@@ -46,7 +46,7 @@ table_element = _ + (note_element('note') | indexes('indexes')) + _
 
 table_body = table_column[1, ...]('columns') + _ + table_element[...]
 
-table_name = (name('schema') + '.' + name('name')) | (name('name'))
+table_name = pp.Combine(name('schema') + '.' + name('name')) | (name('name'))
 
 table = _c + (
     pp.CaselessLiteral("table").suppress()
